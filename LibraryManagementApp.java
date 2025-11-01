@@ -57,7 +57,7 @@ class LibraryBook {
         return bookID;
     }
 
-    // ✅ Getter for isIssued (fix)
+    // Getter for isIssued (fix)
     public boolean getIsIssued() {
         return isIssued;
     }
@@ -128,7 +128,7 @@ public class LibraryManagementApp {
                 case 6:
                     System.out.println("\nAvailable Books:");
                     for (LibraryBook b : books) {
-                        if (!b.getIsIssued()) { // ✅ FIX: using getter
+                        if (!b.getIsIssued()) { 
                             b.displayBookInfo();
                         }
                     }
@@ -146,7 +146,6 @@ public class LibraryManagementApp {
         sc.close();
     }
 
-    // Helper method to find a book by ID
     private static LibraryBook findBookByID(LibraryBook[] books, int bookID) {
         for (LibraryBook b : books) {
             if (b.getBookID() == bookID) {
@@ -156,3 +155,4 @@ public class LibraryManagementApp {
         return null;
     }
 }
+
